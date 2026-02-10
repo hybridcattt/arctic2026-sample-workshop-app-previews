@@ -7,6 +7,7 @@
 
 import SwiftUI
 import DesignSystem
+import Prefire
 
 struct ChatMessage: Identifiable {
     let id = UUID()
@@ -104,9 +105,11 @@ extension SupportChatView {
 #Preview("Light1") {
     SupportChatView(messages: SupportChatView.sampleMessages)
         .preferredColorScheme(.light)
+        .prefireIgnored()
 }
 
 #Preview("Dark1") {
     SupportChatView(messages: SupportChatView.sampleMessages)
         .preferredColorScheme(.dark)
+        .prefireIgnored()
 }
